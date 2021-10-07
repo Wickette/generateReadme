@@ -35,7 +35,7 @@ const questions = [
             type: "list",
             message: "What licenses does the app use?",
             name: "license",
-            choices: ["Apache", "Academic", "GNU", "ISC", "MIT", "Mozilla", "Open"]
+            choices: ["Apache 2.0", "GNU", "MIT", "None"]
         },
 // List of contibutors
         {
@@ -54,6 +54,9 @@ const questions = [
             type: "input",
             message: "How can a user reach you with questions/what should they do if there is an issue?",
             name: "questions",
+            default() {
+                return "Please reach out to me via email with any questions/issues/bug reports"
+            }
         },
 // Owners Git username
         {
@@ -65,6 +68,11 @@ const questions = [
             type: "input",
             message: "Enter your email address.",
             name: "email",
+        },
+        {
+            type: "input",
+            message: "Will there be any additional links and/or images added?",
+            name: "linksImages",
         }
 ];
 
